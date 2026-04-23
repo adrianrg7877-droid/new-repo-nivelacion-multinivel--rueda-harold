@@ -1,0 +1,3 @@
+Java:
+  int vida = 100.5;        // error:esta mal declarado ya que el int es solo para numeros enteros y no decimales
+  String nivel = 1;        // error:pasa lo mismo de arriba el tipo de variable string no es para numeros si no para palabras
