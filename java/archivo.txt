@@ -4,3 +4,23 @@ Java:
 
 Java:
   if (clase = "Guerrero") { ... }   // error: En if necesitas comparar valores, no asignarlos
+
+
+
+// EJERCICIO 3A- completa el codigo
+
+
+// Java: acumular XP hasta subir nivel
+int xp = 0;
+int nivel = 1;
+int xpNecesario = 100;
+int[] batallas = {20, 35, 15, 40, 30};
+
+for (int xpGanado : batallas) {   //  aqui el for each recorre lo que es el arreglo de batallas y en cada vuelta guarda el valor actual en xpGanado
+    xp += xpGanado;
+    if (xp >= xpNecesario) {   // aqui el if despues de supar el xp de cada batalla verifica si ya se acomulo la suficiente para subir de nivel
+        nivel++;
+        xp -= xpNecesario;
+        System.out.println("Nivel " + nivel);
+    }
+}
