@@ -26,19 +26,19 @@ public class simulacion {
             System.out.println("\nCombate contra: " + enemigos[i]);
 
             vida = combatir(vida, ataque, defensa, vidasEnemigos[i], ataquesEnemigos[i]);
-
-            if (vida <= 0) {
-                System.out.println("El héroe ha muerto. FIN DEL JUEGO.");
-                return; 
-            }
-
-           
-            vida = Math.min(vida + 20, vidaMax);
-            System.out.println("Ganaste. Vida actual: " + vida);
         }
-
+         if (vida > 0) {
+    vida = Math.min(vida + 20, vidaMax);
+    System.out.println("Enemigo derrotado. Vida actual: " + vida);
+}
         
         System.out.println("\n¡VICTORIA! Derrotaste a todos los enemigos.");
+        if (vida <= 0) {
+    System.out.println("El héroe ha muerto. FIN DEL JUEGO.");
+    return;
+    
+}
+
     }
 
     public static int combatir(int vidaHero, int ataqueHero, int defHero,
