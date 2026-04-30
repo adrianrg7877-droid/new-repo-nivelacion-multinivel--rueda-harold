@@ -19,4 +19,26 @@ public class simulacion{
             System.out.println(enemigos[i] + " - Vida: " + vidasEnemigos[i] + " - Ataque: " + ataquesEnemigos[i]);
         }
     }
+    public static int combatir(int vidaHero, int ataqueHero, int defHero,
+                           int vidaEnemigo, int ataqueEnemigo) {
+
+    while (vidaHero > 0 && vidaEnemigo > 0) {
+
+        
+        vidaEnemigo -= ataqueHero;
+        System.out.println("Héroe ataca: -" + ataqueHero + 
+                           " | Vida enemigo: " + Math.max(vidaEnemigo, 0));
+
+        if (vidaEnemigo <= 0) break;
+
+        
+        int daño = Math.max(ataqueEnemigo - defHero, 0);
+        vidaHero -= daño;
+
+        System.out.println("Enemigo ataca: -" + daño + 
+                           " | Vida héroe: " + Math.max(vidaHero, 0));
+    }
+
+    return vidaHero; 
+}
 }
