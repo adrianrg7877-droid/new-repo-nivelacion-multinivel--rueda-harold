@@ -1,0 +1,8 @@
+pyton:
+     esta_vivo = 'true'       # error: es un error de tipo logico ya que los 
+                                       valores booleanos en puton son con mayuscula 
+                                       inicial y sin comillas
+     mana = int('cien')       # error: aqui el error es que  la funcion int() solo 
+                                       puede convertir cadenas que representen numeros
+                                        validos asi que en ves de "cien" deberia estar 
+                                        escrito en numero como "100"
