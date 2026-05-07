@@ -6,3 +6,11 @@ pyton:
                                        puede convertir cadenas que representen numeros
                                         validos asi que en ves de "cien" deberia estar 
                                         escrito en numero como "100"
+Python:
+  if nivel >= 5 and vida > 0
+      print('ok')              # error: falta los dos puntos : al final del if
+
+Python (2):
+  clase = 'Guerrero'
+  if clase == 'guerrero':      # error sutil: las mayúsculas y minúsculas no coinciden ('Guerrero' y 'guerrero')
+      print('es guerrero')
